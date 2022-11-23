@@ -66,14 +66,6 @@ git config --list
 ```
 
 ---
-# Exemplos para o curso
-
-- [Baixe o material](https://github.com/dvcirilo/tutorials/git/src)
-- Extraia as pastas
-     - `work`
-     - `files`
-
----
 # Inicializando/clonando um repositório
 
 - Em qualquer diretório de projeto (ou novo): `git init`
