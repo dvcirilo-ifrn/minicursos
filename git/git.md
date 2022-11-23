@@ -140,6 +140,15 @@ git config --list
 `git rm arquivo`
 
 ---
+# Desfazendo modificações
+- Para modificar um commit recente (mensagem errada, esquecimento de arquivos)
+`git commit --amend`
+- Removendo do index:
+`git reset HEAD arquivo`
+- Desfazendo modificações em arquivo não comitado:
+`git checkout -- arquivo`
+
+---
 # Branches
 - Os *branches* ou ramos, são versões alternativas de um projeto.
 - Podem ser utilizados para implementação de novas funcionalidades sem arriscar o que já funciona.
@@ -149,12 +158,32 @@ git config --list
 
 ---
 # Navegando versões/branches
+- Para mudar o branch:
+`git checkout nome-do-branch`
 
 ---
 # Merge
+- Quando o trabalho em um branch deve ser adicionado a outro branch, fazemos um `merge` no branch de destino:
+`git merge branch-origem`
 
 ---
 # Conflitos
+- Quando arquivos são modificados em dois locais diferentes, é necessário mesclar essas modificações.
+- O Git consegue fazer *quase* tudo automaticamente.
+- Quando há um conflito, você será avisado no merge, e os arquivos com problema terão as seguintes indicações:
+```
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+```
+
+---
+# Removendo branches
+`git branch -d branch`
 
 ---
 # Repositórios Remotos
