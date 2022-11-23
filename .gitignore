@@ -6,7 +6,6 @@
 *.swo
 *.blg
 *.bbl
-main.pdf
 *.log
 *.ilg
 *.lot
