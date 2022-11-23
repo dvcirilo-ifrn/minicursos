@@ -1,0 +1,107 @@
+\beamer@endinputifotherversion {3.26pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{Introdu\IeC {\c c}\IeC {\~a}o}{2}{Introdu\IeC {\c c}\IeC {\~a}o}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\slideentry {1}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Vantagens e Desvantagens}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Vantagens e Desvantagens}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Vantagens e Desvantagens}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Fluxo de opera\IeC {\c c}\IeC {\~a}o}}\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {1}{2}{1}{5/5}{Fluxo de opera\IeC {\c c}\IeC {\~a}o}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{6}{Editor de Texto}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {1}{3}{1}{6/6}{Editor de Texto}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\sectionentry {2}{Estrutura de um documento \textlatin {\LaTeX }}{7}{Estrutura de um documento \textlatin {\LaTeX }}{0}}
+\headcommand {\beamer@sectionpages {2}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {2}{0}{2}{7/7}{}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{8}{Classes}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {2}{1}{1}{8/8}{Classes}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {2}{1}{2}{9/9}{Classes}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\sectionentry {3}{Comandos B\IeC {\'a}sicos}{10}{Comandos B\IeC {\'a}sicos}{0}}
+\headcommand {\beamer@sectionpages {7}{9}}
+\headcommand {\beamer@subsectionpages {8}{9}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{10}{Comandos Especiais}}\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\slideentry {3}{1}{1}{10/10}{Comandos Especiais}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{11}{H\IeC {\'\i }fens}}\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\slideentry {3}{2}{1}{11/11}{H\IeC {\'\i }fens}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {4}{Estruturando o Texto}{12}{Estruturando o Texto}{0}}
+\headcommand {\beamer@sectionpages {10}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{12}{Secionamento}}\headcommand {\beamer@subsectionpages {12}{11}}
+\headcommand {\slideentry {4}{1}{1}{12/12}{Secionamento}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {4}{1}{2}{13/13}{Secionamento}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {4}{1}{3}{14/14}{Secionamento}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{15}{Fontes}}\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\slideentry {4}{2}{1}{15/15}{Fontes}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {4}{2}{2}{16/16}{Fontes}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{17}{Listas}}\headcommand {\beamer@subsectionpages {15}{16}}
+\headcommand {\slideentry {4}{3}{1}{17/17}{Listas}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {4}{3}{2}{18/18}{Listas}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {4}{3}{3}{19/19}{Listas}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{20}{Tabelas}}\headcommand {\beamer@subsectionpages {17}{19}}
+\headcommand {\slideentry {4}{4}{1}{20/20}{Tabelas}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{21}{Imagens}}\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\slideentry {4}{5}{1}{21/21}{Imagens}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\sectionentry {5}{Matem\IeC {\'a}tica}{22}{Matem\IeC {\'a}tica}{0}}
+\headcommand {\beamer@sectionpages {12}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{22}{Ambientes matem\IeC {\'a}ticos}}\headcommand {\beamer@subsectionpages {22}{21}}
+\headcommand {\slideentry {5}{1}{1}{22/22}{Ambientes matem\IeC {\'a}ticos}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {5}{1}{2}{23/23}{Ambientes matem\IeC {\'a}ticos}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{24}{Comandos matem\IeC {\'a}ticos b\IeC {\'a}sicos}}\headcommand {\beamer@subsectionpages {22}{23}}
+\headcommand {\slideentry {5}{2}{1}{24/24}{Comandos matem\IeC {\'a}ticos b\IeC {\'a}sicos}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {5}{2}{2}{25/25}{Comandos matem\IeC {\'a}ticos b\IeC {\'a}sicos}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\sectionentry {6}{Changing the layout}{26}{Changing the layout}{0}}
+\headcommand {\beamer@sectionpages {22}{25}}
+\headcommand {\beamer@subsectionpages {24}{25}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{26}{Counters and parameters}}\headcommand {\beamer@subsectionpages {26}{25}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{26}{Dist\IeC {\^a}ncias}}\headcommand {\beamer@subsectionpages {26}{25}}
+\headcommand {\slideentry {6}{2}{1}{26/26}{Dist\IeC {\^a}ncias}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {6}{2}{2}{27/27}{Dist\IeC {\^a}ncias}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{28}{Posi\IeC {\c c}\IeC {\~a}o do texto}}\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\slideentry {6}{3}{1}{28/28}{Posi\IeC {\c c}\IeC {\~a}o do texto}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {6}{3}{2}{29/29}{Posi\IeC {\c c}\IeC {\~a}o do texto}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\sectionentry {7}{Especiarias}{30}{Especiarias}{0}}
+\headcommand {\beamer@sectionpages {26}{29}}
+\headcommand {\beamer@subsectionpages {28}{29}}
+\headcommand {\beamer@subsectionentry {0}{7}{1}{30}{Bibliografia}}\headcommand {\beamer@subsectionpages {30}{29}}
+\headcommand {\slideentry {7}{1}{1}{30/30}{Bibliografia}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsectionentry {0}{7}{2}{31}{Apresenta\IeC {\c c}\IeC {\~o}es de Slides}}\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\slideentry {7}{2}{1}{31/31}{Apresenta\IeC {\c c}\IeC {\~o}es de Slides}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@partpages {1}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\beamer@sectionpages {30}{31}}
+\headcommand {\beamer@documentpages {31}}
+\headcommand {\def \inserttotalframenumber {31}}

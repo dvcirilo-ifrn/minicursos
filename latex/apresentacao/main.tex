@@ -1,0 +1,648 @@
+\documentclass[10pt]{beamer}
+
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+
+\usetheme{Boadilla}
+\usecolortheme{crane}
+
+\title{\LaTeX}
+\subtitle{Um curso de \LaTeX\ em forma de apresentação\footnote{Tradução e adaptação do original de Rainer Rupprecht}}
+\institute{IFRN - Campus Pau dos Ferros}
+\author{Prof. Diego Cirilo}
+\date{Fev. 2013}
+\titlegraphic{\includegraphics[height=10mm]{img/ifrn}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introdução}
+\begin{frame}
+  \frametitle{O \LaTeX}
+  \begin{description}
+    \item[\TeX]{sistema de formatação de texto desenvolvido por
+        \textsc{Donald E. Knuth} (Stanford University) para criar documentos
+        bonitos, especialmente contendo matemática. \TeX\ é um software gratuito.}
+    \item[\LaTeX]{\TeX -macroprocessador escrito por \textsc{Leslie
+        Lamport}, que implementa uma linguagem de marcação (similar: HTML, XML).
+      Usuários podem se ocupam da estrutura ao invés da formatação.}
+    \item[WYSIWYG]{What You See Is What You Get, comportamento de editores de texto
+      como Word, Writer, etc.}
+  \end{description}
+\end{frame}
+
+\subsection{Vantagens e Desvantagens}
+
+\begin{frame}
+  \frametitle{Vantagens}
+  \begin{itemize}
+     \item{Vários estilos profissionais disponíveis.
+         Mudar entre estilos requer pouco esforço e a consistência é mantida.}
+     \item{Formatação matemática de alta qualidade.}
+     \item{Poucos comandos para definir a estrutura de texto, não é necessário se
+       preocupar com tipografia ou \textit{layout}.}
+     \item{Documentos e estruturas científicas podem ser criados rapidamente:
+         \begin{itemize}
+           \item{bibliografia}
+           \item{índice}
+           \item{referências cruzadas}
+           \item{índice remissimo, lista de figuras, tabelas, etc.}
+           \item{...}
+         \end{itemize} }
+     \item{Independente de sistema operacional.}
+     \item{Arquivos de texto simples.}
+     \item{Software Livre!}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Desvantagens}
+  \begin{itemize}
+    \item{Curva de aprendizado}
+    \item{Grandes alterações no layout exigem um bom conhecimento da ferramenta.}
+    \item{É impossível usar outra ferramenta depois do \LaTeX.}
+  \end{itemize}
+\end{frame}
+
+\subsection{Fluxo de operação}
+\begin{frame}
+  \frametitle{Fluxo de Operação}
+  \begin{itemize}
+    \item O \LaTeX\ é escrito em texto puro, com os comandos ou \textit{tags} para designar a formatação.
+    \item Esse texto é então "compilado", ou seja, processado e então é gerado o arquivo final, comumente PDF.
+    \item Portanto para escrever \LaTeX, precisamos de duas ferramentas:
+      \begin{itemize}
+        \item Editor de Texto
+        \item Compilador
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\subsection{Editor de Texto}
+\begin{frame}
+  \frametitle{Editor de Texto}
+  \begin{itemize}
+    \item Usado para escrever o código \LaTeX\ em si.
+    \item Pode ser tão simples quanto o Bloco de Notas do Ruindows, ou
+    \item Ser específico para \LaTeX, como o \TeX Maker, etc.
+    \item A vantagem dos editores específicos é oferecer funções de compilação automática, \textit{highlight}, \textit{templates}, etc.
+  \end{itemize}
+\end{frame}
+
+\section{Estrutura de um documento \LaTeX}
+
+\begin{frame}[fragile]
+  \frametitle{Estrutura de um documento \LaTeX}
+  \center{\footnotesize 
+    \begin{verbatim}
+    % Um comentário... é ignorado pelo compilador
+
+    \documentclass[options]{style} %define o tipo ou "estilo" de documento
+
+    \usepackage[latin1]{inputenc}  %pacotes são adicionados nessa região para as
+    \usepackage[T1]{fontenc}       %mais diversas funções extras.
+
+    \author{}
+    \title{}
+    \date{}
+
+    \begin{document}               %início do documento
+    \maketitle                     %cria cabeçalho ou folha de rosto/títulos
+
+    \chapter{}                     %secionamento
+    ...
+    \end{document}                 %fim do documento
+    \end{verbatim}
+  }
+\end{frame}
+
+\subsection{Classes}
+\begin{frame}[fragile]
+  \frametitle{Classes de Documentos}
+  \center{
+    \begin{tabular}{l|l}
+      \LaTeX & propósito \\
+      \hline
+      article & artigos, relatórios curtos \\
+       report & textos longos com vários cápitulos, ex. teses. \\
+       book   & livros \\
+       letter & cartas \\
+       beamer & apresentações de slides \\
+      sciposter & posters para conferências \\
+    \end{tabular}
+  }
+  \vskip 10pt
+  Além desses, ainda há outros pacotes para estilos específicos, como o abn\TeX2, ou estilos próprios de
+  congressos e sociedades, como o IEEEtran.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Opções de classe}
+  \begin{description}
+    \item[Tamanho da Fonte]{10pt | 11pt | 12pt...}
+    \item[Tamanho do Papel]{a4paper | legalpaper...}
+    \item[Tipos de equações]{fleqn, leqno }
+    \item[Título]{titlepage |  notitlepage}
+    \item[Colunas]{onecolumn | twocolumn}
+    \item[Impressão]{oneside | twoside}
+  \end{description}
+\end{frame}
+
+\section{Comandos Básicos}
+
+\subsection{Comandos Especiais}
+
+\begin{frame}[fragile]
+  \frametitle{Caracteres Especiais}
+  Alguns caracteres têm funções especiais em \TeX, portanto para utiliza-los, é necessário usar comandos:
+
+  \vspace{5mm}
+  \begin{tabular}{l|l|l}
+    $\backslash$~~   & iniciar comando        & \verb+$\backslash$+    \\
+                     &                      & notar: \verb+\\+ = nova linha \\
+    \$               & entrar em modo matemático    & \verb+\$+              \\
+    \&               & tabulação            & \verb+\&+              \\
+    \%               & comentário & \verb+\%+              \\
+    \#               &                      & \verb+\#+              \\
+    \textasciitilde  &                      & \verb+\textasciitilde+ \\
+    \textbar         & linhas verticais & \verb+\textbar+        \\
+    \_               & subscrito     & \verb+\_+              \\
+    \textasciicircum & sobrescrito    & \verb+\textasciicircum+\\
+    \{ \}            & limites de comando    & \verb+\{ \}+           \\
+    $[\ ]$           & argumentos opcionais   & \verb+$[ ]$+           \\
+    `` ''            & aspas      & \verb+`` ''+           \\
+    $> <$            & tabulação              & \verb+$> <$+           \\
+  \end{tabular}
+\end{frame}
+
+\subsection{Hífens}
+
+\begin{frame}[fragile]
+  \frametitle{Hífens}
+  Uma curta linha vertical pode significar várias coisas,
+  dependendo da espessura e comprimento...
+
+  \vspace{5mm}
+  \begin{tabular}{lll}
+    guarda-chuva           & \verb+guarda-chuva+           \\
+    10--18 horas   & \verb+10--18 horas+   \\
+    sim -- não acha? & \verb+sim -- não acha?+ \\
+    sim---ou não?     & \verb+sim---ou não?+     \\
+    0, 1 e --1     & \verb+0, 1 e --1+     \\
+  \end{tabular}
+\end{frame}
+
+\section{Estruturando o Texto}
+
+\subsection{Secionamento}
+
+\begin{frame}[fragile]
+  \frametitle{Comandos para secionamento}
+  \begin{itemize}
+    \item{{$\backslash$part\{\}}}
+    \item{{$\backslash$chapter\{\}}}
+    \item{$\backslash$section\{\}}
+    \item{$\backslash$subsection\{\}}
+    \item{$\backslash$subsubsection\{\}}
+    \item{$\backslash$paragraph\{\}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dividindo longos documentos}
+  É uma boa prática dividir longos arquivos em arquivos menores, e com \LaTeX\ isso é possível.
+  Por exemplo, cada capítulo em um arquivo, etc.
+    \begin{description}
+    \item[$\backslash$input\{\}]{lê arquivo diretamente}
+    \item[$\backslash$include\{\}]{equivalente a
+        $\backslash$clearpage $\backslash$input\{\}
+      $\backslash$clearpage}
+    \item[$\backslash$includeonly\{\}]{usado para limitar os arquivos $\backslash$included }
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sumarização}
+    \begin{itemize}
+        \item{$\backslash$tableofcontents}
+        \item{$\backslash$listoffigures}
+        \item{$\backslash$listoftables}
+        \item{}
+        \item{$\backslash$bibliographystyle\{plainnat\}}
+        \item{$\backslash$bibliography\{references\}}
+        \item{}
+        \item{$\backslash$printindex}
+    \end{itemize}
+\end{frame}
+
+\subsection{Fontes}
+
+\begin{frame}
+  \frametitle{Ênfase}
+    \begin{description}
+       \item[$\backslash$textit\{\}]{itálico, usado para palavras estrangeiras, nomes de espécies, etc: \textit{Staph.
+           aureus}}
+       \item[$\backslash$textsl\{\}]{\textsl{inclinado}}
+       \item[$\backslash$emph\{\}]{:
+         ênfase, isso \emph{é} importante}
+       \item[$\backslash$textsc\{\}]{small caps: \textsc{Neil Armstrong} primeiro homem a pisar na lua (ou não).}
+       \item[$\backslash$textbf\{\}]{negrito: totalmente \textbf{desnecessário}.}
+       \item[$\backslash$texttt\{\}]{fonte monospace, usada para código fonte ou URLs: \texttt{http://www.ifrn.edu.br/}}
+    \end{description}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tamanho de Fontes}
+    \center{\begin{tabbing} \texttt{xfootnotesizexx}\= und dann der Text
+        \kill
+        \verb|\tiny|         \> \tiny         fonte microscópica           \\
+        \verb|\scriptsize|   \> \scriptsize   fonte muito pequena (subscrito)\\
+        \verb|\footnotesize| \> \footnotesize fonte bem pequena (nota de rodapé)      \\
+        \verb|\small|        \> \small        fonte pequena                 \\
+        \verb|\normalsize|   \> \normalsize   fonte normal                \\
+        \verb|\large|        \> \large        fonte grande                 \\
+        \verb|\Large|        \> \Large        fonte maior                \\
+        \verb|\LARGE|        \> \LARGE        fonte maior ainda            \\[3pt]
+        \verb|\huge|         \> \huge         fonte gigantesca                  \\[3pt]
+        \verb|\Huge|         \> \Huge         fonte colossal
+    \end{tabbing}}
+\end{frame}
+
+\subsection{Listas}
+
+\begin{frame}[fragile]
+  \frametitle{Listas Simples}
+    Please believe me:
+    \begin{itemize}
+        \item{Few swallows can turn winter into summer.}
+        \item{Inside it's colder than in the night.
+            \begin{itemize}
+                \item{In the morning it pulls.}
+                \item{At noon he pushes.}
+                \item{In the evening she goes.}
+                \end{itemize} }
+        \item{Every nonsense must find an end.}
+    \end{itemize}
+    {\small \begin{verbatim}
+Please believe me:
+\begin{itemize}
+    \item{Few swallows can turn winter into summer.}
+    \item{Inside it's colder than in the night.
+        \begin{itemize}
+            \item{In the morning it pulls.}
+            \item{At noon he pushes.}
+            \item{In the evening she goes.}
+        \end{itemize} }
+    \item{Every nonsense must find an end.}
+\end{itemize}
+    \end{verbatim} }
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Listas Descritivas}
+    Três animais que você deve conhecer:
+    \begin{description}
+        \item[Catita:]{Um animal pequeno.}
+        \item[Rato:]{Um animal de médio porte.}
+        \item[Guabiru:]{Um animal de respeito}
+    \end{description}
+    {\small \begin{verbatim}
+    \begin{description}
+        \item[Catita:]{Um animal pequeno.}
+        \item[Rato:]{Um animal de médio porte.}
+        \item[Guabiru:]{Um animal de respeito}
+    \end{description}
+\end{verbatim} }
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Listas Enumeradas}
+    Estes são os principais pontos:
+    \begin{enumerate}
+        \item{primeiro item}
+        \item{segundo item}
+        \item{terceiro item
+           \begin{enumerate}
+             \item{primeiro sub-item}
+             \item{segundo sub-item}
+           \end{enumerate} }
+    \end{enumerate}
+    {\small \begin{verbatim}
+    Estes são os principais pontos:
+    \begin{enumerate}
+        \item{primeiro item}
+        \item{segundo item}
+        \item{terceiro item
+           \begin{enumerate}
+             \item{primeiro sub-item}
+             \item{segundo sub-item}
+           \end{enumerate} }
+    \end{enumerate}
+\end{verbatim} }
+\end{frame}
+
+\subsection{Tabelas}
+
+%\begin{frame}[fragile]
+  %\frametitle{Tabelas}
+    %\begin{tabbing}
+        %If \= it's raining           \\
+            %\> then \= put on boots, \\
+            %\>      \> take hat;     \\
+            %\> else \> smile.        \\
+        %Leave house.
+    %\end{tabbing}
+    %{\small \begin{verbatim}
+%\begin{tabbing}
+    %If \= it's raining           \\
+        %\> then \= put on boots, \\
+        %\>      \> take hat;     \\
+        %\> else \> smile.        \\
+    %Leave house.
+%\end{tabbing}
+    %\end{verbatim} }
+%\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tabelas}
+  \center{
+    \begin{tabular}{|r||c|p{2.5in}|}
+      \hline
+      \multicolumn{3}{|c|}{\sc Histórico Silva\&\ Silva} \\
+      \hline
+      \hline
+      \multicolumn{1}{|c||}{\bf Ano} & \bf Preço   & \multicolumn{1}{c|}{\bf Comentários} \\
+      \hline
+      1971 & 97--245   & Um mal ano para fazendeiros no oeste.     \\ \hline
+        72 & 245--245  & Pouca produção devido à seca.  \\ \hline
+        73 & 245--2001 & Ótima produção. \\ \hline
+    \end{tabular}
+  }
+    {\scriptsize \begin{verbatim}
+    \begin{tabular}{|r||c|p{2.5in}|}
+        \hline
+        \multicolumn{3}{|c|}{\sc Histórico Silva\&\ Silva} \\
+        \hline
+        \hline
+        \multicolumn{1}{|c||}{\bf Ano} & \bf Preço   & \multicolumn{1}{c|}{\bf Comentários} \\
+        \hline
+        1971 & 97--245   & Um mal ano para fazendeiros no oeste.     \\ \hline
+          72 & 245--245  & Pouca produção devido à seca.  \\ \hline
+          73 & 245--2001 & Ótima produção. \\ \hline
+    \end{tabular}
+    \end{verbatim} }
+    Nota: Esse é um péssimo exemplo de tabela!
+\end{frame}
+
+\subsection{Imagens}
+
+\begin{frame}[fragile]
+  \frametitle{Imagens}
+  \center{\includegraphics[width=3cm]{img/ifrn}}
+
+  {\footnotesize \begin{verbatim}
+  \center{\includegraphics[width=3cm]{img/ifrn}}
+  \end{verbatim} }
+  \begin{itemize}
+     \item{Requer \verb+\usepackage{graphicx}+}
+     \item{Vários formatos de arquivos possíveis. Para o pdfLaTeX pdf, png, jpg. }
+     \item{Argumentos opcionais: width, angle, size}
+  \end{itemize}
+\end{frame}
+
+\section{Matemática}
+
+\subsection{Ambientes matemáticos}
+
+\begin{frame}[fragile]
+  \frametitle{Matemática embutida}
+    se $a$ e $b$ são os lados de um
+    triangulo reto e $c$ a hipotenusa, então
+    $c^2=a^2+b^2$ (Teorema de Pitágoras).
+
+    {\small \begin{verbatim}
+    se $a$ e $b$ são os lados de um
+    triangulo reto e $c$ a hipotenusa, então
+    $c^2=a^2+b^2$ (Teorema de Pitágoras).
+    \end{verbatim} }
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Matemática isolada}
+    se $a$ e $b$ são os lados de um
+    triangulo reto e $c$ a hipotenusa, então
+     \begin{equation}
+        c^2=a^2+b^2
+     \end{equation}
+    (Teorema de Pitágoras).
+
+    {\small \begin{verbatim}
+    se $a$ e $b$ são os lados de um
+    triangulo reto e $c$ a hipotenusa, então
+     \begin{equation}
+        c^2=a^2+b^2
+     \end{equation}
+    (Teorema de Pitágoras).
+    \end{verbatim} }
+\end{frame}
+
+\subsection{Comandos matemáticos básicos}
+
+\begin{frame}[fragile]
+  \frametitle{Fórmulas}
+    \begin{displaymath}
+        x^5 \qquad \qquad x_1 \qquad \qquad \sqrt{x^2+\sqrt[3]{y}}
+    \end{displaymath}
+    \begin{verbatim}
+    x^5     x_1       \sqrt{x^2+\sqrt[3]{y}}
+    \end{verbatim}
+
+    \begin{displaymath}
+        \frac{1}{\frac{x^2+y^2+z^2}{x+y}} \qquad \qquad {n\choose {n-k}}
+    \end{displaymath}
+    \begin{verbatim}
+    \frac{1}{\frac{x^2+y^2+z^2}{x+y}}  {n\choose {n-k}}
+    \end{verbatim}
+
+    \begin{displaymath}
+        \int \limits_{-\infty}^{\infty}x^3 \qquad \qquad \sum_{i=1}^{n}a_i
+    \end{displaymath}
+    \begin{verbatim}
+    \int \limits_{-\infty}^{\infty}x^3  \sum_{i=1}^{n}a_i
+    \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Alinhando equações}
+    \begin{align}
+        f(x)                & =  \cos x \\
+        f'(x)               & =  -\sin x \\
+        \int_{0}^{x} f(y)dy & =  \sin x
+    \end{align}
+    {\small \begin{verbatim}
+\begin{align}
+    f(x)                & =  \cos x \\
+    f'(x)               & =  -\sin x \\
+    \int_{0}^{x} f(y)dy & =  \sin x
+\end{align}
+    \end{verbatim} }
+\end{frame}
+
+\section{Changing the layout}
+
+\subsection{Counters and parameters}
+
+\subsection{Distâncias}
+
+\begin{frame}[fragile]
+  \frametitle{Distância horizontal}
+    Aqui temos \hspace{2cm} 2cm de distância.
+
+    {\begin{verbatim}
+    Aqui temos \hspace{2cm} 2cm de distância.
+    \end{verbatim}}
+
+    esquerda\hfill direita
+    {\begin{verbatim}
+    esquerda\hfill direita
+    \end{verbatim}}
+    \begin{tabbing}
+        \texttt{xenspace}\qquad \= \kill
+        \verb|\,|       \> distancia pequena \\
+        \verb|\enspace| \> distância de um número \\
+        \verb|\quad| \> tão largo quanto a altura de uma letra \\
+        \verb|\qquad| \> o dobro do anterior \verb|\quad| \\
+        \verb|\hfill| \> distância que vai de 0\\
+                     \> a $\infty$ \\
+    \end{tabbing}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Distância Vertical}
+    Aqui
+
+    \vspace{2cm}
+
+    há 2 cm de distância.
+    \begin{verbatim}
+    Aqui
+
+    \vspace{2cm}
+
+    há 2 cm de distância.
+    \end{verbatim}
+
+    \begin{tabbing}
+        \texttt{xsmallskip}\qquad \= \kill
+        \verb|\smallskip| \> cerca de $1/4$ de linha \\
+        \verb|\medskip| \> cerca de $1/2$ linha \\
+        \verb|\bigskip| \> cerca de 1 linha \\
+        \verb|\vfill| \> distância que pode ir de 0\\
+               \> a $\infty$ \\
+    \end{tabbing}
+\end{frame}
+
+\subsection{Posição do texto}
+
+\begin{frame}[fragile]
+  \frametitle{Centralizando Texto}
+    \begin{center}
+        In\\
+        the\\
+        middle I don't\\
+        feel\\
+        so marginalized\\
+    \end{center}
+    \begin{verbatim}
+    \begin{center}
+      In\\
+      the\\
+      middle I don't\\
+      feel\\
+      so marginalized\\
+    \end{center}
+    \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Alinhamento à direita}
+    \begin{flushright}
+       Essa não é uma posição política
+    \end{flushright}
+    \begin{verbatim}
+    \begin{flushright}
+       Essa não é uma posição política
+    \end{flushright}
+    \end{verbatim}
+\end{frame}
+
+\section{Especiarias}
+
+%\subsection{O Índice}
+
+%\begin{frame}[fragile]
+  %\frametitle{Indexing commands}
+  %\begin{description}
+    %\item[simple]{\verb+gnat\index{gnat}+}
+    %\item[subtopics]{\verb+gnat\index{gnat!size of}+}
+    %\item[page range]{\verb+\index{gnat|(}...\index{gnat|)}+}
+    %\item[reference]{\verb+\index{gnat|see{mosquito}}+}
+    %\item[font]{\verb+gnat\index{gnat@\textit{gnat}}+}
+  %\end{description}
+  %After first \LaTeX\ run, start \alert{makeindx} to sort the index.
+%\end{frame}
+
+\subsection{Bibliografia}
+
+\begin{frame}[fragile]
+  \frametitle{Bib\TeX}
+  Ferramenta para organização de referências no formato ASCII. Pode ser produzida por várias ferramentas.  
+  \center{\small \begin{verbatim}
+@article{Alb-76,
+  AUTHOR= {W.J. Albery and J.R. Knowles},
+  TITLE= {Evolution of enzyme function and the
+    development of catalytic efficiency},
+  JOURNAL= {Biochemistry},
+  VOLUME= {15},
+  YEAR= {1976},
+  PAGES= {5631-5640},
+  ABSTRACT= {Catalytic efficiency constant kcat/Km
+    defined },
+  DOI= {10.1021/bi00670a032},
+  LANGUAGE= {engl}
+}
+  \end{verbatim} }
+  Similar para livros, teses, etc. No texto use $\backslash$cite\{Alb-76\}.
+\end{frame}
+
+\subsection{Apresentações de Slides}
+
+\begin{frame}
+  \frametitle{Beamer-slides}
+  $\backslash$begin\{frame\} \\
+  \hspace{2em}$\backslash$frametitle\{\} \\
+  \hspace{2em}... \\
+  $\backslash$end\{frame\}
+\end{frame}
+
+%\subsection{TeX-ing}
+
+%\begin{frame}
+  %\frametitle{\TeX ing}
+  %Always use the sequence:
+  %\begin{description}
+    %\item[\LaTeX]{produces the necessary intermediate
+        %files}
+    %\item[makeindx]{sort the index}
+    %\item[bibtex]{create the bibliography}
+    %\item[\LaTeX]{include bibliography and index, resolve
+        %cross-references}
+    %\item[\LaTeX]{resolve remaining cross-references}
+  %\end{description}
+  %Note: using pdf\LaTeX\ instead of \LaTeX\ produces pdf-files
+  %directly.
+%\end{frame}
+
+\end{document}
