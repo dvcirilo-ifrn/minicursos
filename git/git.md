@@ -160,6 +160,8 @@ git config --list
 # Navegando versões/branches
 - Para mudar o branch:
 `git checkout nome-do-branch`
+- O mesmo funciona para commits:
+`git checkout 7ab839a`
 
 ---
 # Merge
@@ -180,6 +182,10 @@ git config --list
 </div>
 >>>>>>> iss53:index.html
 ```
+
+---
+# Conflitos
+- Após resolver os conflitos (apagando as indicações no código), devemos fazer um novo commit.
 
 ---
 # Removendo branches
