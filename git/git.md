@@ -158,19 +158,37 @@ git config --list
 
 ---
 # Repositórios Remotos
+- Para listar os remotos:
 `git remote list`
+- Para adicionar um remoto:
+`git remote add nome-do-remoto url`
+- Para mudar a URL de um remoto:
+`git remote set-url nome-do-remoto url`
+- Normalmente o nome do remoto padrão é `origin`
 
 ---
 # Pull/Push
+- Para receber as modificações do repositório remoto:
+`git pull nome-do-remoto nome-do-branch`
+
+- Para enviar nossas modificações para o remoto:
+`git push nome-do-remoto nome-do-branch`
+
+- Convém sempre realizar um pull antes de um push para garantir o merge local.
 
 ---
 # Criando um repositório no Github
-
+- [Github](https://github.com/new)
 ---
 # Forks
+- Forks são cópias de repositório no Github.
+- Aplicado no seu user.
 
 ---
 # Fluxo de colaboração
+- Devemos criar um fork de uma aplicação que queremos contribuir.
+- No nosso repositório local, devemos criar um remote para o repositório original, normalmente chamando de `upstream`
+- Fazemos o fluxo de desenvolvimento normal, e quando necessário realizamos um pull request no repositório original.
 
 ---
 # Referências
