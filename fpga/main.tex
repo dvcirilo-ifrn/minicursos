@@ -1,0 +1,23 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+% Define as páginas de título das seções.
+\newcommand{\sectiontitlepage}{
+\begin{frame}
+  \begin{center}
+    \structure{\huge \insertsection}
+  \end{center}
+\end{frame}
+}
+
+\usetheme{Warsaw}
+\setbeamercovered{transparent}
+\setbeamertemplate{caption}[numbered]
+\title{Introdução à Prototipagem de Sistemas Digitais em FPGA}
+\author{Prof. Diego Cirilo}
+\date{}
+\institute[IFRN]{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte\\
+                \textit{diego.cirilo@ifrn.edu.br}}
+
+\input{body.tex}

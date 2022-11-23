@@ -1,0 +1,16 @@
+*.aux
+*.vrb
+*.dvi
+*.out
+*.swp
+*.swo
+*.blg
+*.bbl
+main.pdf
+*.log
+*.ilg
+*.lot
+*.lof
+*.nlo
+*.nls
+*.toc

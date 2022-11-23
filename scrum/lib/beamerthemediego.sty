@@ -1,0 +1,41 @@
+\mode<presentation>
+
+\definecolor{ifgreen}{RGB}{50,160,65}
+\definecolor{ifdarkgreen}{RGB}{6,102,23}
+
+
+\useinnertheme[shadow=true]{rounded}
+\useoutertheme{shadow}
+\usecolortheme{orchid}
+\usecolortheme{whale}
+
+\setbeamertemplate{headline}{}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\setbeamercolor{structure}{fg=ifgreen}
+\setbeamercolor{palette quaternary}{bg=ifdarkgreen}
+\setbeamercovered{transparent=10}
+\useinnertheme{rectangles}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\setbeamerfont{block title}{size={}}
+\mode
+<all>
+

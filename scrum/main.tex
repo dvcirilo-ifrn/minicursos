@@ -1,0 +1,32 @@
+\documentclass[ignorenonframetext]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{textpos}
+
+% Define as páginas de título das seções.
+\newcommand{\sectiontitlepage}{
+\begin{frame}
+  \begin{center}
+    \structure{\huge \insertsection}
+  \end{center}
+\end{frame}
+}
+
+%\usepackage{lib/beamerthemediego}
+\usecolortheme{crane}
+% position the logo
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(11cm,7.6cm)
+%\includegraphics[height=0.8cm,keepaspectratio]{lib/logoifrn}
+\end{textblock*}}
+
+\title{Scrum}
+\author[Diego Cirilo]{Diego Cirilo\\
+\small{\texttt{dvcirilo@gmail.com}}}
+\date{}
+\titlegraphic{
+  %\vspace{-1cm}\hspace*{0.20cm}\includegraphics[width=5cm]{lib/logoifrncapa}
+}
+
+
+\input{body.tex}
