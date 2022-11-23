@@ -186,7 +186,7 @@ git config --list
 ---
 # Repositórios Remotos
 - Para listar os remotos:
-`git remote list`
+`git remote -v`
 - Para adicionar um remoto:
 `git remote add nome-do-remoto url`
 - Para mudar a URL de um remoto:
