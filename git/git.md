@@ -10,9 +10,6 @@ author: Diego Cirilo
 
 # <!--fit--> Introdução ao Git
 ### Prof. Diego Cirilo
-Minicurso apresentado na III Expotec 
-IFRN - Campus São Paulo do Potengi
-2022
 
 ---
 
@@ -139,6 +136,17 @@ git config --list
 `git reset HEAD arquivo`
 - Desfazendo modificações em arquivo não comitado:
 `git checkout -- arquivo`
+
+---
+# Gitignore
+- Existem arquivos nos projetos que **não devem** ser versionados
+- Ex. bancos de dados, configurações locais, ambientes virtuais, senhas, etc.
+- Para garantir que esses arquivos não entrem no projeto, seu nome deve estar em um arquivo `.gitignore` na raiz no repositório.
+- Ex.
+```
+venv
+db.sqlite3
+```
 
 ---
 # Branches
