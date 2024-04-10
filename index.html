@@ -1,37 +1,56 @@
 <!DOCTYPE html> 
-<html>
-<head> 
+<html lang="pt-br">
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Minicursos</title> 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <style type="text/css"> 
-    body { 
+      body { 
         margin:40px auto; 
         max-width:650px; 
         line-height:1.6; 
         font-size:18px; 
         color:#444; 
         padding:0 10px 
-    } 
-    h1, h2, h3 { line-height:1.2 } 
-    </style> 
-</head> 
+      } 
 
-<body> 
+      h1, h2, h3 { line-height:1.2 } 
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          color:#c9d1d9;
+          background: #0d1117
+        }
+
+        a:link {
+          color: #58a6ff
+        }
+
+        a:visited {
+          color: #8e96f0
+        }
+      }
+    </style> 
+  </head> 
+
+  <body> 
     <h1>💻 Minicursos - Prof. Diego Cirilo</h1> 
 
     <hr>
 
-    <h2>Aulas</h2>
+    <h2>Slides</h2>
 
     <ul>
-        <li>Introdução ao Git - <a href="git/git.html">slides</a>/<a href="https://github.com/dvcirilo/tutorials/blob/main/git/git.md">texto</a></li>
-        <li>Latex - <a href="latex/apresentacao/main.pdf" target="_blank">slides</a>/<a href="https://github.com/dvcirilo/tutorials/blob/main/latex/apresentacao/main.tex">texto</a></li>
+      <li>Introdução ao Git - <a href="git/git.html">slides</a>/<a href="https://github.com/dvcirilo/tutorials/blob/main/git/git.md">texto</a></li>
+      <li>Latex - <a href="latex/apresentacao/main.pdf" target="_blank">slides</a>/<a href="https://github.com/dvcirilo/tutorials/blob/main/latex/apresentacao/main.tex">texto</a></li>
     </ul>
+
     <hr>
 
     <p style="text-align:center">
-        <a href="https://dvcirilo.github.io">Prof. Diego Cirilo</a> - <a href="https://github.com/dvcirilo/tutorials/">Github</a> - <a href="https://classroom.google.com">Contato</a><br>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      <a href="https://dvcirilo.github.io">Prof. Diego Cirilo</a> - <a href="https://github.com/dvcirilo/tutorials/">Github</a> - <a href="https://classroom.google.com">Contato</a><br>
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
     </p>
-</body>
+  </body>
 </html>
