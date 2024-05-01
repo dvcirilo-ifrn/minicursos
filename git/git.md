@@ -169,6 +169,10 @@ db.sqlite3
 `git merge branch-origem`
 
 ---
+# Prática
+- https://git-school.github.io/visualizing-git/
+
+---
 # Conflitos
 - Quando arquivos são modificados em dois locais diferentes, é necessário mesclar essas modificações.
 - O Git consegue fazer *quase* tudo automaticamente.
