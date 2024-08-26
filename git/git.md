@@ -93,6 +93,7 @@ git config --list
 
 - Para adicionar todos os arquivos do diretório:
 `git add *`
+
 ---
 # *Commits*
 - O commit é o momento onde *salvamos* o repositório.
@@ -189,7 +190,7 @@ db.sqlite3
 
 ---
 # Conflitos
-- Após resolver os conflitos (apagando as indicações no código), devemos fazer um novo commit.
+- Após resolver os conflitos (apagando as indicações `<<< === >>>` no código), devemos fazer um novo commit.
 
 ---
 # Removendo branches
@@ -229,6 +230,19 @@ db.sqlite3
 - Devemos criar um fork de uma aplicação que queremos contribuir.
 - No nosso repositório local, devemos criar um remote para o repositório original, normalmente chamando de `upstream`
 - Fazemos o fluxo de desenvolvimento normal, e quando necessário realizamos um pull request no repositório original.
+
+---
+# Arquivos Indesejados
+- Devemos ter cuidado para não fazer *commit* de arquivos indesejados/sensíveis.
+- Ambientes virtuais, senhas, chaves, dados de configuração restritos, etc.
+- É importante configurar o `gitignore` no início do projeto para evitar falhas.
+- Caso senhas, chaves ou segredos tenham sido enviados para o Github, devem ser imediatamente alterados!
+
+---
+# Arquivos Indesejados
+- Para remover os arquivos indesejados podemos usar o `git-filter-repo`
+- É um *script* *Python* - [link](https://github.com/newren/git-filter-repo)
+- [Guia de uso](https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#using-git-filter-repo)
 
 ---
 # Referências
