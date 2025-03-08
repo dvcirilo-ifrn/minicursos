@@ -1,2 +1,2 @@
-# tutorials
+# Minicursos
 Material de minicursos
